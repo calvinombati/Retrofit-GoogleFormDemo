@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Email address"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="16dp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtFullName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            android:hint="Full name"
+            app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+            app:layout_constraintStart_toStartOf="@+id/edtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+        <EditText
+            android:id="@+id/edtGithub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/black"
+            android:hint="Github profile Url"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/edtFullName"
+            app:layout_constraintStart_toStartOf="@+id/edtFullName"
+            app:layout_constraintTop_toBottomOf="@+id/edtFullName" />
+
+        <TextView
+            android:id="@+id/textViewGender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gender"
+            android:textColorHint="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edtGithub"
+            app:layout_constraintStart_toStartOf="@+id/edtGithub"
+            app:layout_constraintTop_toBottomOf="@+id/edtGithub" />
+
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGender">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/notSay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prefer not to say" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textViewProgrammings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColorHint="@color/black"
+            android:text="Please select you favorite programming languages"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/radioSex"
+            app:layout_constraintStart_toStartOf="@+id/radioSex"
+            app:layout_constraintTop_toBottomOf="@+id/radioSex" />
+
+        <CheckBox
+            android:id="@+id/kotlinCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kotlin"
+            app:layout_constraintEnd_toEndOf="@+id/textViewProgrammings"
+            app:layout_constraintStart_toStartOf="@+id/textViewProgrammings"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProgrammings" />
+        <CheckBox
+            android:id="@+id/javaCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Java"
+            app:layout_constraintEnd_toEndOf="@+id/kotlinCheckBox"
+            app:layout_constraintStart_toStartOf="@+id/kotlinCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/kotlinCheckBox" />
+        <CheckBox
+            android:id="@+id/dartCheckBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Dart"
+            app:layout_constraintEnd_toEndOf="@+id/javaCheckBox"
+            app:layout_constraintStart_toStartOf="@+id/javaCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/javaCheckBox" />
+        <CheckBox
+            android:id="@+id/swiftCheckbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Swift"
+            app:layout_constraintEnd_toEndOf="@+id/dartCheckBox"
+            app:layout_constraintStart_toStartOf="@+id/dartCheckBox"
+            app:layout_constraintTop_toBottomOf="@+id/dartCheckBox"
+            />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/edtGithub"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/edtGithub"
+            app:layout_constraintTop_toBottomOf="@+id/swiftCheckbox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
